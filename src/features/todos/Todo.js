@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
-import {completed, removed, selectTodoById} from "./Todos";
+import {completed, removed} from "./todosSlice";
 import {useCallback} from "react";
+import {selectTodoById} from "./todosSlice";
 
 const Todo = ({id}) => {
     const { complete, text } = useSelector(selectTodoById(id))
@@ -12,9 +13,8 @@ const Todo = ({id}) => {
         dispatch(completed(id))
     }, [dispatch, id])
     return (
-        <li key={id} className={'flex bg-white px-3 py-2 rounded-md mb-3 shadow-sm'}>
+        <li key={id} className={'flex bg-teal-50 px-3 py-2 rounded-md mb-3 shadow-sm'}>
             <button
-                tabIndex={0}
                 className={`${complete ? 'line-through' : ''} grow select-none text-left`}
                 onClick={handleComplete}
             >{text}</button>

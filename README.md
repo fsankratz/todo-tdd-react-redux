@@ -1,3 +1,11 @@
+# Simple Todo-App Example for Story-Driven-Development
+
+This project shows how to use the Acceptance Criteria of the User Story to do Test-Driven-Development within React.
+The implementation uses
+- testing-library
+- redux
+- tailwindcss (for basic styling)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

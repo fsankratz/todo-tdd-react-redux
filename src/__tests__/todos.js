@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
 import userEvent from "@testing-library/user-event";
-import App from "../App";
+import App from "../app/App";
 import {configureStore} from "@reduxjs/toolkit";
-import {todosReducer} from "../story/Todos";
 import {Provider} from "react-redux";
+import {todosReducer} from "../features/todos/todosSlice";
 
 const renderWithStore = ui => {
     render(<Provider store={configureStore({ reducer: todosReducer })}>{ui}</Provider>)
